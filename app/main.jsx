@@ -18,37 +18,23 @@ class HomePage extends AsyncElement {
     }
 }
 
-class About extends React.Component {
-    render() {
-        return (
-            <div>
-                <h2>About</h2>
-            </div>
-        );
+class AboutPage extends AsyncElement {
+     constructor(props) {
+        super(props);
+
+        this.bundle = require('bundle?lazy!@pages/about/about-page');
     }
 }
 
-class Contact extends React.Component {
-    render() {
-        return (
-            <div>
-                <h2>Contact</h2>
-            </div>
-        );
+class ContactPage extends AsyncElement {
+     constructor(props) {
+        super(props);
+
+        this.bundle = require('bundle?lazy!@pages/contact/contact-page');
     }
 }
 
 class NotFoundPage extends React.Component {
-    render() {
-        return (
-            <div>
-                404 Not Found
-            </div>
-        );
-    }
-}
-
-class NotFoundPage1 extends React.Component {
     render() {
         return (
             <div>
@@ -63,8 +49,8 @@ render((
         <Router history={browserHistory}>
             <Route path="/" component={MasterPage}>
                 <IndexRoute component={HomePage}/>
-                <Route path="/about" component={About}/>
-                <Route path="/contact" component={Contact}/>
+                <Route path="/about" component={AboutPage}/>
+                <Route path="/contact" component={ContactPage}/>
                 <Route path="*" component={NotFoundPage}/>
             </Route>
         </Router>

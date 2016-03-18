@@ -18,10 +18,12 @@ class AsyncElement extends Component {
 
     componentDidMount() {
         if (!this.state.component) {
-            this.bundle(file => {
-                RootStore.replaceReducer(combineReducers({root: RootReducer, page: file.reducer}));
+            this.bundle(({page, reducer}) => {
+                if (reducer) {
+                    RootStore.replaceReducer(combineReducers({root: RootReducer, page: reducer}));
+                }
                 
-                this.setState({component: file.page});
+                this.setState({component: page});
             });
         }
     }
