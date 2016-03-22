@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 
 import HomeReducer from './home-reducer';
 
-import RootStore from '@common/root-store';
+import { dispatch } from '@common';
 
 class HomePage extends Component {
     constructor(props) {
@@ -18,11 +18,11 @@ class HomePage extends Component {
     }
     
     onIncrement() {
-        RootStore.dispatch({ type: 'INCREMENT' });
+        dispatch({ type: 'INCREMENT' });
     }
 
     onDecrement() {
-        RootStore.dispatch({ type: 'DECREMENT' });
+        dispatch({ type: 'DECREMENT' });
     }
 
     incrementIfOdd() {

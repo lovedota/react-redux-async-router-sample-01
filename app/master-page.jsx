@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
-import { Link } from 'react-router'
-
-const ACTIVE = { color: 'red' }
+import { Link } from 'react-router';
 
 class RootPage extends Component {
     getLinkClass(link) {

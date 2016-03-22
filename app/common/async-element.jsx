@@ -11,8 +11,8 @@ class AsyncElement extends Component {
 
         this.state = {component: null, data: null};
         
-        RootStore.subscribe(() => {
-            this.setState({data: RootStore.getState().page})
+        this.subscribe = RootStore.subscribe(() => {
+            this.setState({data: RootStore.getState()})
         });
     }
 
@@ -20,12 +20,16 @@ class AsyncElement extends Component {
         if (!this.state.component) {
             this.bundle(({page, reducer}) => {
                 if (reducer) {
-                    RootStore.replaceReducer(combineReducers({root: RootReducer, page: reducer}));
+                    RootStore.replaceReducer(reducer);
                 }
                 
                 this.setState({component: page});
             });
         }
+    }
+    
+    componentWillUnmount() {
+        this.subscribe(); //unsuscribe event
     }
 
     render() {

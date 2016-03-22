@@ -1,10 +1,11 @@
 import '../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
-//import 'bootstrap-sass';
+import 'jquery';
+import 'bootstrap-sass';
 
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import { Router, Route, IndexRoute, Link, IndexLink, browserHistory } from 'react-router';
+import { Router, Route, IndexRoute, Link, IndexLink, hashHistory } from 'react-router';
 
 import AsyncElement from './common/async-element';
 import MasterPage from './master-page';
@@ -46,7 +47,7 @@ class NotFoundPage extends React.Component {
 
 render((
     <Provider store={RootStore}>
-        <Router history={browserHistory}>
+        <Router history={hashHistory}>
             <Route path="/" component={MasterPage}>
                 <IndexRoute component={HomePage}/>
                 <Route path="/about" component={AboutPage}/>

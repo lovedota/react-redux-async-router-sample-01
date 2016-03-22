@@ -14,6 +14,6 @@
 # How to run
 
 - npm install
-- npm install -g http-server
-- npm run watch 
-- http-server
+- npm install -g live-server
+- npm run build 
+- npm run start

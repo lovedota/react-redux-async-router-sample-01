@@ -30,7 +30,11 @@ module.exports = {
             {
                   test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
                   loader: 'url?limit=10000'
-            }
+            },
+            { 
+                test: require.resolve('jquery'), 
+                loader: 'expose?$!expose?jQuery'
+            },
         ]
     },
     plugins: [
@@ -44,7 +48,7 @@ module.exports = {
         extensions: ['', '.js', '.jsx'],
         alias: {
             '@pages': path.resolve(__dirname, './app/pages'),
-            '@common': path.resolve(__dirname, './app/common')
+            '@common': path.resolve(__dirname, './app/common/index')
         }
     }
 };
