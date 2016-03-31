@@ -10,7 +10,7 @@ module.exports = {
         path: path.resolve(__dirname, './assets'),
         filename: '[name].js',
         publicPath: '/assets/',
-        chunkFilename: "[id].chunk.js"
+        chunkFilename: '[id].chunk.js'
     },
     module: {
         loaders: [

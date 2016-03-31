@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
-
 import { Link } from 'react-router';
 
 class RootPage extends Component {
@@ -38,12 +36,12 @@ class RootPage extends Component {
                     {this.props.children}
                 </div>
             </div>
-        )
+        );
     }
 }
 
 RootPage.contextTypes = {
     router: React.PropTypes.object
-}
+};
 
 export default RootPage;

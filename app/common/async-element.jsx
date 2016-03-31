@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import { combineReducers } from 'redux';
+//import { combineReducers } from 'redux';
 
 import Spinner from './spinner';
 import RootStore from './root-store';
-import RootReducer from './root-reducer';
+//import RootReducer from './root-reducer';
 
 class AsyncElement extends Component {
     constructor(props) {
@@ -12,7 +12,7 @@ class AsyncElement extends Component {
         this.state = {component: null, data: null};
         
         this.subscribe = RootStore.subscribe(() => {
-            this.setState({data: RootStore.getState()})
+            this.setState({data: RootStore.getState()});
         });
     }
 
