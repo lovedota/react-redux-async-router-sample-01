@@ -14,9 +14,10 @@
             2,
             "prefer-double"
         ],
+        "no-multiple-empty-lines": ["error", {"max": 1}],
         "no-use-before-define": 2,
         "react/jsx-no-undef": 1,
-        "no-unused-vars": 2,
+        "no-unused-vars": ["error", { "varsIgnorePattern": "sinonChai" }],
         "react/jsx-uses-react": 1,
         "react/jsx-uses-vars": 1,
         "react/react-in-jsx-scope": 1

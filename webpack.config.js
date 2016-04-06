@@ -50,5 +50,6 @@ module.exports = {
             '@pages': path.resolve(__dirname, './app/pages'),
             '@common': path.resolve(__dirname, './app/common/index')
         }
-    }
+    },
+    devtool: '#source-map'
 };

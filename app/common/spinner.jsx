@@ -11,4 +11,4 @@ export default () => {
     		<div className="square-4"></div>
     	</div>
     );
-}
+};

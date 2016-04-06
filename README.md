@@ -10,6 +10,9 @@
 - https://github.com/reactjs/react-redux
 - https://github.com/reactjs/react-router
 - https://github.com/webpack/bundle-loader
+- http://airbnb.io/enzyme/docs/api/mount.html
+- https://github.com/speedskater/babel-plugin-rewire
+- https://github.com/bkonkle/jsx-chai
 
 # How to run
 
