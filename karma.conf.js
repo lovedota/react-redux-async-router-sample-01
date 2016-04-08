@@ -31,6 +31,7 @@ module.exports = function(config) {
             require('karma-sinon-chai'),
             require('karma-mocha-reporter'),
             require('karma-chrome-launcher'),
+            require('karma-phantomjs-launcher'),
             require('karma-webpack')
         ],
         client: {

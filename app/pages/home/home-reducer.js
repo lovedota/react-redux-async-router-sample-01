@@ -1,5 +1,3 @@
-import { ActionTypes } from 'redux';
-
 let initialState = {
     value: 0
 };

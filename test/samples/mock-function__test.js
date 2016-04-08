@@ -23,7 +23,7 @@ class TestClass {
 let obj,
     clock;
 
-describe('hello', function() {
+describe('MockingFunction', function() {
     beforeEach(() => {
         obj = new TestClass();
     });

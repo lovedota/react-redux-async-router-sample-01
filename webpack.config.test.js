@@ -32,12 +32,12 @@ module.exports = {
             '@pages': path.resolve(__dirname, './app/pages'),
             '@common': path.resolve(__dirname, './app/common/index'),
             '@utils': path.resolve(__dirname, './app/utils'),
+            '@fixtures': path.resolve(__dirname, './test/fixtures'),
             sinon: 'sinon/pkg/sinon'
         }
     },
     devtool: '#source-map',
     externals: {
-        jquery: '$',
         cheerio: 'window',
         'react/lib/ExecutionEnvironment': true,
         'react/lib/ReactContext': true

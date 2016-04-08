@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
-import { Provider } from 'react-redux';
-
 import HomeReducer from './home-reducer';
-
-import { dispatch } from '@common';
+import HomeAction from './home-action';
 
 class HomePage extends Component {
     constructor(props) {
@@ -18,11 +15,11 @@ class HomePage extends Component {
     }
     
     onIncrement() {
-        dispatch({ type: 'INCREMENT' });
+        HomeAction.increment();
     }
 
     onDecrement() {
-        dispatch({ type: 'DECREMENT' });
+        HomeAction.decrement();
     }
 
     incrementIfOdd() {
