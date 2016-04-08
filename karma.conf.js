@@ -15,11 +15,15 @@ module.exports = function(config) {
         webpack: webpackConfig,
         webpackMiddleware: {
             stats: {
-                colors: true,          
+                colors: true,
             },
             noInfo: true
         },
         reporters: ['mocha'],
+        // reporter options
+        mochaReporter: {
+            showDiff: true,
+        },
         port: 9876,
         colors: true,
         logLevel: config.LOG_INFO,

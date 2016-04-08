@@ -23,6 +23,7 @@
     "bundle-loader": "^0.5.4",
     "chai": "^3.5.0",
     "css-loader": "^0.23.1",
+    "diff": "^2.2.2",
     "enzyme": "^2.2.0",
     "expose-loader": "^0.7.1",
     "jasmine-core": "^2.4.1",
